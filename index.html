@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fce9ed" />
+  <title>For You, My Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <div class="petals" aria-hidden="true"></div>
+
+  <main>
+    <nav>
+      <span class="monogram">For <i>♡</i> Haruka</span>
+      <a href="#message">a little note</a>
+    </nav>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">A garden made just for you, Haruka</p>
+      <h1 id="hero-title">You make my<br /><em>world bloom.</em></h1>
+      <p class="intro">Every ordinary day feels softer, brighter, and a little more beautiful with you in it.</p>
+      <a class="button" href="#game">Open my heart <span>↓</span></a>
+
+      <div class="bouquet" aria-label="An animated bouquet of flowers">
+        <div class="stem stem-one"></div><div class="stem stem-two"></div><div class="stem stem-three"></div>
+        <div class="leaf leaf-one"></div><div class="leaf leaf-two"></div><div class="leaf leaf-three"></div>
+        <div class="flower flower-pink"><b></b><i></i><i></i><i></i><i></i><i></i><strong></strong></div>
+        <div class="flower flower-cream"><b></b><i></i><i></i><i></i><i></i><i></i><strong></strong></div>
+        <div class="flower flower-red"><b></b><i></i><i></i><i></i><i></i><i></i><strong></strong></div>
+      </div>
+    </section>
+
+    <section class="game" id="game" aria-labelledby="game-title">
+      <div class="game-copy">
+        <p class="eyebrow">A tiny question for Haruka</p>
+        <h2 id="game-title">Where did we first meet?</h2>
+        <p>Answer correctly to unlock your special message.</p>
+      </div>
+      <form class="question-form" id="question-form">
+        <label for="answer">Your answer</label>
+        <div class="answer-row">
+          <input id="answer" name="answer" type="text" autocomplete="off" placeholder="Type your answer…" required />
+          <button type="submit">Unlock <span>♡</span></button>
+        </div>
+        <p class="game-status" id="game-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="letter" id="message">
+      <div class="letter-card">
+        <p class="eyebrow">My favorite person, Haruka</p>
+        <h2>For every little<br />moment with you.</h2>
+        <p>I love the way you turn small things into memories: a shared laugh, a quiet drive, a random message that makes my whole day. You are my safe place, my happy thought, and my favorite adventure.</p>
+        <p>Thank you for being you. I choose you—in all the days ahead, in all the seasons, again and again.</p>
+        <p class="signature">All my love,<br /><em>Niño</em></p>
+      </div>
+      <aside class="reasons">
+        <span class="small-flower" aria-hidden="true">✿</span>
+        <p>Things I adore about you</p>
+        <ul>
+          <li>Your kind heart</li>
+          <li>The way you make me laugh</li>
+          <li>Every version of your smile</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer>Made with all my heart <span>♥</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
