@@ -52,7 +52,7 @@ questionForm.addEventListener('submit', (event) => {
     gameStatus.textContent = 'Correct!';
     answer.disabled = true;
     questionForm.querySelector('button').disabled = true;
-    setTimeout(() => { window.location.href = 'love.html'; }, 850);
+    setTimeout(() => { window.location.href = 'pages/love.html'; }, 850);
     return;
   }
 
