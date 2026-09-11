@@ -1,5 +1,5 @@
-const CACHE_NAME = 'for-haruka-v2';
-const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './assets/css/styles.css', './assets/js/script.js', './pages/love.html', './pages/monthsary.html', './pages/memories.html', './assets/css/love.css', './assets/css/monthsary.css', './assets/css/memories.css'];
+const CACHE_NAME = 'for-haruka-v5';
+const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './assets/css/styles.css', './assets/js/script.js', './assets/js/sound-effects.js', './pages/love.html', './pages/monthsary.html', './pages/memories.html', './assets/css/love.css', './assets/css/monthsary.css', './assets/css/memories.css'];
 self.addEventListener('install', (event) => { event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', (event) => event.waitUntil(
   caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key)))).then(() => self.clients.claim())
