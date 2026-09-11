@@ -1,0 +1,10 @@
+{
+  "name": "For Haruka",
+  "short_name": "For Haruka",
+  "description": "A little romantic garden made for Haruka.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fce9ed",
+  "theme_color": "#fce9ed",
+  "icons": [{ "src": "assets/icons/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

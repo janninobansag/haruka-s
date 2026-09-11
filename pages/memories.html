@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8dde2" />
+  <title>Our Little Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/memories.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <p>Our 31st monthsary</p>
+      <h1>Our little <em>memories.</em></h1>
+      <span>Every photo is a piece of my favorite story: us.</span>
+    </header>
+
+    <section class="gallery" aria-label="Our photo memories">
+      <button class="memory-card" type="button"><img src="../assets/images/IMG_20250615_003133.jpg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/IMG_20260911_232429.jpg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/Messenger_creation_027E6906-E724-4660-B37A-E68F20CE3CCD.jpeg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/Messenger_creation_1A15EA52-4589-460C-A029-2D86ADEF74D0.jpeg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/Messenger_creation_4E3DCCEB-A71A-46EE-84A4-41391E5E974A.jpeg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/Messenger_creation_5c06efaa-0088-4de1-97d1-803da754fee7.jpeg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/Messenger_creation_78509035-0866-47E3-92CE-FC03768ABC9E.jpeg" alt="A favorite memory together" /></button>
+      <button class="memory-card" type="button"><img src="../assets/images/Messenger_creation_955626638928781.jpeg" alt="A favorite memory together" /></button>
+    </section>
+
+    <a class="back-link" href="../index.html">Back to our little garden</a>
+  </main>
+  <dialog class="lightbox" id="lightbox"><button type="button" aria-label="Close photo">×</button><img src="" alt="" /></dialog>
+  <script>
+    const lightbox = document.querySelector('#lightbox');
+    const fullPhoto = lightbox.querySelector('img');
+    document.querySelectorAll('.memory-card img').forEach((photo) => photo.closest('button').addEventListener('click', () => {
+      fullPhoto.src = photo.src;
+      fullPhoto.alt = photo.alt;
+      lightbox.showModal();
+    }));
+    lightbox.addEventListener('click', (event) => { if (event.target === lightbox || event.target.tagName === 'BUTTON') lightbox.close(); });
+  </script>
+</body>
+</html>

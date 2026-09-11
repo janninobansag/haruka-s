@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#fce9ed" />
+  <meta name="description" content="A little romantic garden made for Haruka." />
   <title>For You, My Love</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="assets/icons/app-icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet" />
@@ -17,14 +20,24 @@
   <main>
     <nav>
       <span class="monogram">For <i>♡</i> Haruka</span>
-      <a href="#message">a little note</a>
+      <button class="install-button" id="install-button" type="button" hidden aria-label="Install this app" title="Install app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" /></svg><span>Install</span></button>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a class="note-link" href="#message" aria-label="Read my little note" title="A little note"><span>a little note</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5zM15 3v5h5M8 12h8M8 16h6" /></svg></a>
+        <a class="nav-icon gift-link" href="pages/monthsary.html" aria-label="Open your monthsary surprise" title="A surprise for Haruka">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16v10H4zM3 6h18v4H3zM12 6v14M12 6c-3.8 0-5-1.1-5-2.5S8.2 1 10 3.2L12 6zm0 0c3.8 0 5-1.1 5-2.5S15.8 1 14 3.2L12 6z" /></svg>
+        </a>
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Turn on monthsary theme" title="Monthsary theme"><span></span></button>
+      </div>
     </nav>
 
     <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">A garden made just for you, Haruka</p>
+      <p class="eyebrow" id="hero-eyebrow">A garden made just for you, Haruka</p>
       <h1 id="hero-title">You make my<br /><em>world bloom.</em></h1>
-      <p class="intro">Every ordinary day feels softer, brighter, and a little more beautiful with you in it.</p>
-      <a class="button" href="#game">Open my heart <span>↓</span></a>
+      <p class="intro" id="hero-intro">Every ordinary day feels softer, brighter, and a little more beautiful with you in it.</p>
+      <a class="button" href="#game"><span id="hero-button-text">Open my heart</span> <span class="button-arrow">↓</span></a>
 
       <div class="bouquet" aria-label="An animated bouquet of flowers">
         <div class="stem stem-one"></div><div class="stem stem-two"></div><div class="stem stem-three"></div>
@@ -37,9 +50,9 @@
 
     <section class="game" id="game" aria-labelledby="game-title">
       <div class="game-copy">
-        <p class="eyebrow">A tiny question for Haruka</p>
+        <p class="eyebrow" id="game-eyebrow">A tiny question for Haruka</p>
         <h2 id="game-title">Where did we first meet?</h2>
-        <p>Answer correctly to unlock your special message.</p>
+        <p id="game-description">Answer correctly to unlock your special message.</p>
       </div>
       <form class="question-form" id="question-form">
         <label for="answer">Your answer</label>
