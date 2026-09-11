@@ -7,6 +7,7 @@ main { min-height:100vh; min-height:100dvh; display:flex; flex-direction:column;
 h1 { margin:25px 0 15px; font:500 clamp(3rem,8vw,6rem)/.98 "Playfair Display",serif; letter-spacing:-.05em; } h1 em { color:var(--rose); }
 .apology { max-width:560px; font-size:.95rem; line-height:1.65; }.apology p { margin:0 0 14px; }.apology p:last-child { margin-bottom:0; font-family:"Playfair Display",serif; font-size:1.15rem; }
 a { margin-top:34px; color:var(--ink); text-decoration:none; border-bottom:1px solid #b87885; padding-bottom:4px; font-size:.8rem; }
+.music-control { position:fixed; right:18px; bottom:18px; z-index:10; display:grid; place-items:center; width:40px; height:40px; padding:0; border:1px solid #dba1aa; border-radius:50%; background:#fffaf4e8; color:var(--ink); box-shadow:0 7px 18px #6e475628; cursor:pointer; }.music-control svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }.music-control.is-muted { opacity:.55; }
 .hearts span { position:fixed; bottom:-40px; color:#d8667d; opacity:.55; animation:rise linear infinite; }
 @keyframes beat { 0%,100% { transform:scale(1); } 30% { transform:scale(1.16); } 55% { transform:scale(.98); } }
 @keyframes rise { to { transform:translateY(-115vh) rotate(22deg); opacity:0; } }
